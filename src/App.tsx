@@ -47,8 +47,7 @@ function App() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>User Directory</h1>
-        <p>View and manage user information</p>
+        <h1>Users</h1>
       </header>
 
       {loading && (

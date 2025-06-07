@@ -19,35 +19,39 @@ const UserList: React.FC<UserListProps> = ({ users, onUserClick, onDeleteUser })
       <table className={styles.userTable}>
         <thead>
           <tr>
-            <th>Name / Email</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Website</th>
-            <th>Company</th>
-            <th>Actions</th>
+            <th>NAME/EMAIL</th>
+            <th>ADDRESS</th>
+            <th>PHONE</th>
+            <th>WEBSITE</th>
+            <th>COMPANY</th>
+            <th>ACTION</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user.id} onClick={() => onUserClick(user)}>
               <td>
-                <div><strong>{user.name}</strong></div>
-                <div>{user.email}</div>
+                <div className={styles.userName}>{user.name}</div>
+                <div className={styles.userEmail}>{user.email}</div>
               </td>
-              <td>
-                {user.address.street}, {user.address.suite}<br />
-                {user.address.city}, {user.address.zipcode}
+              <td className={styles.userAddress}>
+                <div className={styles.userAddressLine}>{user.address.street}, {user.address.suite}</div>
+                <div className={styles.userAddressLine}>{user.address.city}, {user.address.zipcode}</div>
               </td>
               <td>{user.phone}</td>
-              <td>{user.website}</td>
+              <td>
+                <a href={`https://${user.website}`} target="_blank" rel="noopener noreferrer" className={styles.userWebsite}>
+                  {user.website}
+                </a>
+              </td>
               <td>{user.company.name}</td>
               <td>
-                <button 
-                  className={styles.deleteButton}
+                <span 
+                  className={styles.deleteIcon}
                   onClick={(e) => handleDeleteClick(e, user.id)}
                 >
-                  Delete
-                </button>
+                  ✕
+                </span>
               </td>
             </tr>
           ))}
