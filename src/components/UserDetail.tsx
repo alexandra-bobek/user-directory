@@ -1,5 +1,5 @@
 import React from 'react';
-import type { User } from '../types.ts';
+import type { User } from '../types';
 import styles from '../styles/UserDetail.module.css';
 
 interface UserDetailProps {

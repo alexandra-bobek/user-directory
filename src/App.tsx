@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { User } from './types.ts';
+import type { User } from './types';
 import { fetchUsers } from './services/api';
 import UserList from './components/UserList';
 import UserDetail from './components/UserDetail';

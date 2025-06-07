@@ -13,7 +13,7 @@ A modern React application for viewing and managing user information. This appli
 
 ## Technologies Used
 
-- **React 19**: For building the user interface
+- **React 18**: For building the user interface
 - **TypeScript**: For type safety and better developer experience
 - **Vite**: For fast development and optimized builds
 - **CSS Modules**: For component-scoped styling
