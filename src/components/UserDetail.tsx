@@ -13,7 +13,7 @@ const UserDetail: React.FC<UserDetailProps> = ({ user, onClose }) => {
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+      <div className={styles.modalContent} role="dialog" onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>×</button>
 
         <div className={styles.userDetailHeader}>
